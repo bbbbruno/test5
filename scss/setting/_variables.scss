@@ -7,13 +7,14 @@
 // font ---------------------------------------------------------------------------------------------------------------------------------------------
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Lusitana:400,700');
 $font-top: 'Dancing Script', cursive;
-$font-heading: 'Lusitana', serif;
+$font-heading: 'Times New Roman', sans-serif;
 
 // colors ------------------------------------
 $main: #194769;
 $main-darken: #2D4369;
 $sub-yellow: #E9CF4E;
 $sub-orange: #F2855E;
+$bg: #F6F6E9;
 
 // breakpoint ---------------------------
 $breakpoints: (

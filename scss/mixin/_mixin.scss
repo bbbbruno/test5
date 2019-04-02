@@ -1,3 +1,10 @@
 @mixin btn-gradient() {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: bold;
+  padding: 23px 65px 22px 85px;
+  display: inline-block;
+  border-radius: 180px;
+  margin-bottom: 132px;
   background: linear-gradient(#113047 0%, #194769 5.42%, #214d6e 49.78%, #0c2436 100%);
 }

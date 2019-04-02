@@ -17,10 +17,11 @@ body {
     width: 100%;
   }
 
-  color: #090803;
+  color: $main;
   font-family: 'メイリオ', Meiryo,sans-serif;;
   -webkit-font-smoothing: antialiased;
-  line-height: 1.7;
+  line-height: 1.5;
+  background-color: $bg;
 }
 
 // keyframes
