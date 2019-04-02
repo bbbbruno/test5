@@ -1,6 +1,17 @@
 .parallax-window {
   min-height: 613px;
-	background: transparent;
+  background: transparent;
+  @include media(md) {
+    display: none;
+  }
+
+  &._sp {
+    display: none;
+    @include media(md) {
+      display: block;
+      min-height: 394px;
+    }
+  }
 }
 .parallax-slider {
   top: 0;

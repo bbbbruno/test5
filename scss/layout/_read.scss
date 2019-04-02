@@ -2,6 +2,9 @@
   text-align: right;
   position: relative;
   margin-bottom: 65px;
+  @include media(md) {
+    margin-bottom: 87px;
+  }
 
   &-txtbox {
     text-align: start;
@@ -11,22 +14,50 @@
     max-width: 758px;
     position: relative;
     top: -25px;
+    @include media(md) {
+      top: 0;
+      padding: 51px 34px 112px;
+    }
   }
   &-tit {
     font-size: 4rem;
     margin-bottom: 30px;
     padding-left: 5px;
+    @include media(md) {
+      font-size: 1.8rem;
+      margin-bottom: 39px;
+      padding-left: 0;
+    }
+
+    span {
+      display: none;
+      @include media(md) {
+        display: inline;
+      }
+    }
   }
   &-txt {
     font-size: 2rem;
     line-height: 1.2;
     letter-spacing: 0.005em;
     color: #707070;
+    @include media(md) {
+      font-size: 1.4rem;
+      line-height: 1.71428571;
+      letter-spacing: 0.005em;
+      padding: 0 1px;
+    }
   }
 
   &-img {
     position: absolute;
     top: 228px;
     left: 131px;
+    @include media(md) {
+      max-width: 71.5625vw;
+      top: auto;
+      left: 0;
+      bottom: -77px;
+    }
   }
 }

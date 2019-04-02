@@ -12,6 +12,12 @@
       position: absolute;
       top: -131px;
       right: 0;
+      @include media(md) {
+        font-size: 1.8rem;
+        padding: 8px 68px 9px;
+        position: static;
+        display: inline-block;
+      }
 
       &._white {
         color: #ffffff;
@@ -19,6 +25,12 @@
         max-width: 640px;
         padding: 14px 66px 14px 94px;
         top: -20px;
+        @include media(md) {
+          display: block;
+          padding: 9px 52px 8px;
+          position: static;
+          margin-top: 10.8px;
+        }
       }
     }
   }
@@ -26,8 +38,30 @@
   &-top {
     padding-left: 61.5px;
     display: flex;
-    align-items: flex-end;
     margin-bottom: 90px;
+    @include media(md) {
+      display: block;
+      padding-left: 0;
+      margin-bottom: 43.38px;
+    }
+  }
+  &-topimg {
+    @include media(md) {
+      display: none;
+    }
+  }
+  &-tits {
+    display: flex;
+    align-items: flex-end;
+    @include media(md) {
+      justify-content: flex-end;
+      padding-right: 21.5px;
+      padding-bottom: 20px;
+      width: 100%;
+      height: 95.3125vw;
+      background: url('../img/about-bg-sp.jpg') no-repeat bottom;
+      background-size: cover;
+    }
   }
   &-toptit {
     writing-mode: vertical-rl;
@@ -35,12 +69,21 @@
     font-weight: normal;
     line-height: 1.1;
     font-family: $font-heading;
+    @include media(md) {
+      font-size: 4rem;
+      line-height: 1.125;
+    }
   }
   &-topsubtit {
     writing-mode: vertical-rl;
     font-size: 2.4rem;
     margin-left: 14.5px;
     letter-spacing: 0.09em;
+    @include media(md) {
+      font-size: 1.1rem;
+      line-height: 1;
+      margin-left: 2.5px;
+    }
 
     span {
       text-combine-upright: all;
@@ -50,11 +93,17 @@
   &-headingwrapper {
     text-align: center;
     margin-bottom: 38px;
+    @include media(md) {
+      margin-bottom: 47px;
+    }
 
     h2 {
       color: #2d4369;
       font-size: 3.2rem;
       position: relative;
+      @include media(md) {
+        font-size: 1.8rem;
+      }
       &:not(:last-child) {
         margin-bottom: 12px;
       }
@@ -77,24 +126,43 @@
         left: 50%;
         transform: translateX(-50%);
         z-index: -1;
+        @include media(md) {
+          width: 135px;
+          height: 15px;
+          background-size: 7.5px 7.5px;
+        }
       }
       &:nth-child(2)::after {
         width: 465px;
+        @include media(md) {
+          width: 260px;
+        }
       }
     }
   }
 
+  &-list {
+    @include media(md) {
+      padding-bottom: 20px;
+    }
+  }
   &-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 34.5px 0 68px;
-    &:nth-child(2n) {
-      flex-direction: row-reverse;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 0 34.5px 0 68px;
+      &:nth-child(2n-1) {
+        flex-direction: row-reverse;
+      }
     }
   }
 
   &-txtbox {
     max-width: 347px;
+    @include media(md) {
+      padding: 0 35px 8px !important;
+    }
 
     &._01 {
       padding: 25px 45px 0 22px;
@@ -109,6 +177,12 @@
   }
   &-tit {
     font-size: 2.4rem;
+    position: relative;
+    @include media(md) {
+      text-align: center !important;
+      margin-bottom: 15px !important;
+      font-size: 1.8rem;
+    }
 
     &._01 {
       margin-bottom: 112px;
@@ -117,6 +191,9 @@
       text-align: right;
       padding-left: 10px;
       margin-bottom: 85px;
+      @include media(md) {
+        padding-left: 0;
+      }
     }
     &._03 {
       margin-bottom: 112px;
@@ -124,20 +201,36 @@
   }
   &-txt {
     line-height: 1.625;
+    @include media(md) {
+      line-height: 1.857142857142857;
+    }
   }
 
   &-imgbox {
     position: relative;
 
     &._01 {
+      @include bg-img(about1, 54.14063vw, 49.4949494949495%, 39.6875%);
       margin-bottom: 44px;
+      @include media(md) {
+        margin-bottom: 96px;
+      }
     }
     &._02 {
+      @include bg-img(about2, 54.14063vw, 49.4949494949495%, 39.6875%);
       margin-bottom: 52px;
+      @include media(md) {
+        margin-bottom: 102px;
+      }
     }
     &._03 {
+      @include bg-img(about3, 54.14063vw, 49.4949494949495%, 39.6875%);
       right: 8px;
       margin-bottom: 147px;
+      @include media(md) {
+        margin-bottom: 98px;
+        right: auto;
+      }
     }
   }
   &-num {
@@ -147,6 +240,16 @@
     font-weight: bold;
     position: absolute;
     line-height: 1.10555556;
+    z-index: 100;
+    @include media(md) {
+      font-size: 14rem;
+      line-height: 1.10714286;
+      top: auto !important;
+      right: auto !important;
+      bottom: -103px !important;
+      left: 50% !important;
+      transform: translateX(-50%);
+    }
 
     &._01 {
       top: -57px;
