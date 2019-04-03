@@ -1,3 +1,6 @@
+/* --------------------------------
+ * HEADER
+ * -------------------------------- */
 .header {
   background: url('../img/top.jpg') no-repeat center center;
   background-size: cover;
@@ -36,6 +39,8 @@
   }
   &-btn {
     @include btn-gradient();
+    padding: 23px 65px 22px 85px;
+    margin-bottom: 132px;
     position: relative;
     z-index: 200;
   }

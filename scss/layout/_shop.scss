@@ -1,0 +1,82 @@
+/* --------------------------------
+ * SHOP
+ * -------------------------------- */
+.shop {
+  margin-top: 233px;
+  padding-top: 56px;
+  background: $main;
+  color: #ffffff;
+  text-align: center;
+
+  &-heading {
+    @include heading-bg(20rem, 4rem);
+    margin-bottom: 109px;
+
+    h3 {
+      top: 56.6%;
+      transform: translate(-50%, -56.6%);
+    }
+  }
+
+  &-list {
+    display: flex;
+  }
+  &-item {
+    flex: 0 0 50%;
+
+    @for $var from 1 through 2 {
+      &:nth-child(#{$var}) &-wrapper {
+        position: relative;
+        &::before {
+          content: '';
+          display: block;
+          padding-top: 60.625%;
+        }
+
+        &-inner {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: url('../img/shop#{$var}.jpg');
+          background-size: cover;
+        }
+      }
+    }
+  }
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(246, 246, 233, 0.3);
+    z-index: 1;
+  }
+
+  &-txtbox {
+    position: relative;
+    padding: 52px 0 51px;
+
+    &._aoyama {
+      background: $sub-orange;
+    }
+    &._sinjuku {
+      background: $sub-yellow;
+    }
+  }
+  &-tit {
+    font-size: 8rem;
+    font-family: $font-heading;
+    line-height: 1.1;
+    position: absolute;
+    top: -51px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &-txt {
+    font-size: 4rem;
+    letter-spacing: 0.36em;
+  }
+}

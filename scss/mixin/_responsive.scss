@@ -1,0 +1,7 @@
+@mixin responsive($target, $base, $num) {
+
+  @if $target == 'width' {
+    $percent: $num / $base * 100;
+    max-width: #{$percent}vw;
+  }
+}

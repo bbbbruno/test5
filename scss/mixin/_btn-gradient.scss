@@ -1,0 +1,23 @@
+@mixin btn-gradient() {
+  font-size: 2.4rem;
+  line-height: 1.5;
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 180px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  background: linear-gradient(#113047 0%, #194769 5.42%, #214d6e 49.78%, #0c2436 100%);
+  &:hover {
+    opacity: 1;
+    $start: darken(#113047, 5%);
+    $almoststart: darken(#194769, 5%);
+    $middle:  darken(#214d6e, 5%);
+    $end: darken(#0c2436, 5%);
+    background: linear-gradient($start 0%, $almoststart 5.42%, $middle 49.78%, $end 100%);
+  }
+  @include media(md) {
+    font-size: 1.1rem;
+    padding: 12px 24px 11px 24px;
+    margin-bottom: 162px;
+    letter-spacing: 0.1em;
+  }
+}

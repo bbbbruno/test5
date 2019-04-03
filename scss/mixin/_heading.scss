@@ -1,0 +1,21 @@
+@mixin heading() {
+  text-align: center;
+
+  h2 {
+    font-size: 7.6rem;
+    font-family: $font-heading;
+    line-height: 1.105263157894737;
+  }
+  h3 {
+    font-size: 3.2rem;
+    &::after {
+      content: '';
+      width: 80px;
+      height: 3px;
+      display: block;
+      background-color: $sub-yellow;
+      margin: 0 auto;
+      margin-top: 29px;
+    }
+  }
+}

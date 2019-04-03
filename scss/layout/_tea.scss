@@ -1,0 +1,138 @@
+.tea {
+  padding-top: 139px;
+
+  &-topwrapper {
+    position: relative;
+    margin-bottom: 55px;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &-topimgbox {
+
+    h2 {
+      font-family: $font-heading;
+      font-size: 10rem;
+      font-weight: normal;
+      color: $sub-yellow;
+      text-align: right;
+      line-height: 1.11;
+      position: absolute;
+      top: -55.5px;
+      right: 16px;
+      &:nth-child(2) {
+        top: 41.5px;
+      }
+    }
+  }
+  &-toptxtbox {
+    position: relative;
+    max-width: 377.6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 16px 0 11.6px;
+
+    h3 {
+      font-size: 2rem;
+      color: $sub-orange;
+      text-align: right;
+      margin-bottom: 74px;
+    }
+    p {
+      font-size: 2rem;
+      line-height: 1.8;
+      color: #172b3f;
+    }
+  }
+
+  &-topimgs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 99px;
+  }
+  &-topimg {
+
+    img {
+      @include responsive(width, 1140, 360);
+    }
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 350px));
+    grid-auto-rows: 216px;
+    grid-gap: 57px 31px;
+    justify-content: center;
+  }
+  &-item {
+    background: #ffffff;
+    position: relative;
+    &:nth-child(1) {
+      padding: 43px 45px 25px;
+    }
+    &:nth-child(2) {
+      padding: 43px 42px 24px 48px;
+    }
+    &:nth-child(3) {
+      padding: 43px 45px 22px;
+    }
+    &:nth-child(4) {
+      padding: 38px 45px 29px;
+    }
+    &:nth-child(5) {
+      padding: 38px 45px 34px;
+    }
+    &:nth-child(6) {
+      padding: 38px 35px 40px 55px;
+    }
+  }
+  &-num {
+    width: 80px;
+    height: 80px;
+    background: #ffffff;
+    color: $sub-orange;
+    font-family: $font-heading;
+    font-size: 6rem;
+    line-height: 1.1;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -37px;
+  }
+  &-tit {
+    font-size: 2.4rem;
+    text-align: center;
+    &::after {
+      content: '';
+      width: 150px;
+      height: 2px;
+      background-color: $sub-orange;
+      display: block;
+      border-radius: 1px;
+      margin: 9.5px auto 0;
+    }
+
+    &._01 {
+      margin-bottom: 20.5px;
+    }
+    &._02 {
+      margin-bottom: 19.5px;
+    }
+    &._03 {
+      margin-bottom: 21.5px;
+    }
+    &._04 {
+      margin-bottom: 27.5px;
+    }
+    &._05 {
+      margin-bottom: 26.5px;
+    }
+    &._06 {
+      margin-bottom: 39.5px;
+    }
+  }
+}

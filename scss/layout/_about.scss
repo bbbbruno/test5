@@ -1,3 +1,6 @@
+/* --------------------------------
+ * ABOUT
+ * -------------------------------- */
 .about {
   position: relative;
 
@@ -162,11 +165,11 @@
     max-width: 347px;
     @include media(md) {
       padding: 0 35px 8px !important;
+      max-width: 100%;
     }
 
     &._01 {
       padding: 25px 45px 0 22px;
-      max-width: 347px;
     }
     &._02 {
       padding: 20px 10px 0 59px;
@@ -178,6 +181,7 @@
   &-tit {
     font-size: 2.4rem;
     position: relative;
+    z-index: 100;
     @include media(md) {
       text-align: center !important;
       margin-bottom: 15px !important;

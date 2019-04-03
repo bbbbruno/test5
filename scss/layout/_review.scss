@@ -1,0 +1,101 @@
+/* --------------------------------
+ * REVIEW
+ * -------------------------------- */
+.review {
+  padding-top: 60px;
+  text-align: center;
+
+  &-heading {
+    @include heading();
+    margin-bottom: 108.5px;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 494px;
+    grid-gap: 16px 28px;
+    justify-content: center;
+    padding: 0 69.5px 0 68.5px;
+    margin-bottom: 60px;
+    @include media(md) {
+      grid-template-columns: minmax(320px, 494px);
+      padding: 0;
+    }
+  }
+  &-item {
+    position: relative;
+    text-align: start;
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+    @for $var from 1 through 4 {
+      &:nth-child(#{$var}) &-inner {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../img/review#{$var}.jpg');
+        background-size: cover;
+      }
+    }
+  }
+
+  &-txtbox {
+    background: rgba(25, 71, 105, 0.3);
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  &-tit {
+    font-size: 3.2rem;
+
+    &._01 {
+      padding-left: 36px;
+      padding-bottom: 24px;
+    }
+    &._02 {
+      padding-left: 40px;
+      padding-bottom: 23px;
+    }
+    &._03 {
+      padding-left: 36px;
+      padding-bottom: 21px;
+    }
+    &._04 {
+      padding-left: 40px;
+      padding-bottom: 20px;
+    }
+  }
+  &-txt {
+    font-size: 2rem;
+    background: $sub-yellow;
+
+    &._01 {
+      padding: 46px 0 40px 36px;
+    }
+    &._02 {
+      padding: 47px 0 40px 40px;
+    }
+    &._03 {
+      padding: 44px 0 42px 36px;
+    }
+    &._04 {
+      padding: 45px 0 42px 40px;
+    }
+  }
+
+  &-btn {
+    @include btn-gradient();
+    padding: 23px 43px 22px;
+    letter-spacing: 0.002em;
+    color: #ffffff !important;
+  }
+}

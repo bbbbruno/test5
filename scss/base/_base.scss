@@ -74,21 +74,15 @@ body {
 // typograpy
 br {
 
-  &.lg {
-    display: none;
-    @include media(lg) {
-      display: inline;
-    }
-  }
-  &.lg_fade {
-    @include media(lg) {
-      display: none;
-    }
-  }
   &.md {
     display: none;
     @include media(md) {
       display: inline;
+    }
+  }
+  &.md_fade {
+    @include media(md) {
+      display: none;
     }
   }
 }

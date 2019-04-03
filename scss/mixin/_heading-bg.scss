@@ -1,0 +1,18 @@
+@mixin heading-bg($size-bg, $size) {
+  text-align: center;
+  position: relative;
+
+  h2 {
+    font-family: $font-heading;
+    font-size: $size-bg;
+    line-height: 1.105;
+    color: rgba(233, 207, 78, 0.5);
+  }
+  h3 {
+    font-size: $size;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

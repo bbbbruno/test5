@@ -1,0 +1,68 @@
+/* --------------------------------
+ * QA
+ * -------------------------------- */
+.qa {
+  padding-top: 109px;
+
+  &-heading {
+    @include heading-bg(18rem, 3.2rem);
+    margin-bottom: 118px;
+  }
+
+  &-list {
+    padding: 0 110.5px;
+  }
+  &-item {
+    margin-bottom: 16px;
+  }
+  &-tit {
+    color: #ffffff;
+    padding: 28px 0 28px 95px;
+    background: $sub-orange;
+    position: relative;
+    &::before {
+      content: 'Q';
+      display: block;
+      font-family: $font-heading;
+      font-size: 4rem;
+      line-height: 1.125;
+      color: $main;
+      position: absolute;
+      top: 14px;
+      left: 37px;
+    }
+    &._close::after {
+      content: '\f067';
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      display: none;
+    }
+    &._open::after {
+      content: '\f068';
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      display: none;
+    }
+
+    svg.svg-inline--fa {
+      position: absolute;
+      right: 65px;
+      top: 50%;
+      width: 30px;
+      height: 30px;
+      color: $main;
+      transform: translateY(-50%);
+    }
+  }
+  &-txtbox {
+    color: #111d2f;
+    background: #ffffff;
+    line-height: 1.25;
+    padding: 38px 95px 37px;
+    display: none;
+
+    &._open {
+      display: block;
+    }
+  }
+}
