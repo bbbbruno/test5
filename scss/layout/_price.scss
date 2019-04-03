@@ -22,8 +22,14 @@
     position: relative;
     background: #ffffff;
     border: 1px solid $main;
-    padding: 51px 35px 30px 36px;
+    padding: 55px 35px 33px 36px;
     text-align: center;
+    &:nth-child(2) {
+      right: 5px;
+      @include media(md) {
+        right: auto;
+      }
+    }
     &:not(:last-child) {
       margin-right: 34px;
       @include media(lg) {

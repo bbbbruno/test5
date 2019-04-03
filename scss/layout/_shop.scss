@@ -12,17 +12,24 @@
     @include heading-bg(20rem, 4rem);
     margin-bottom: 109px;
 
+    h2 {
+      font-weight: normal;
+    }
     h3 {
-      top: 56.6%;
-      transform: translate(-50%, -56.6%);
+      top: 59%;
+      transform: translate(-50%, -59%);
     }
   }
 
   &-list {
-    display: flex;
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
   }
   &-item {
-    flex: 0 0 50%;
+    @media screen and (min-width: 768px) {
+      flex: 0 0 50%;
+    }
 
     @for $var from 1 through 2 {
       &:nth-child(#{$var}) &-wrapper {
@@ -78,5 +85,6 @@
   &-txt {
     font-size: 4rem;
     letter-spacing: 0.36em;
+    margin-left: 15px;
   }
 }

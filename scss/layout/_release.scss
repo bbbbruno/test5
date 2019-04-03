@@ -2,7 +2,7 @@
  * RELEASE
  * -------------------------------- */
 .release {
-  padding-top: 116px;
+  padding-top: 118px;
 
   &-heading {
     @include heading();
@@ -10,36 +10,44 @@
   }
 
   &-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0 16.5px;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0 16.5px;
+    }
   }
   &-item {
-    flex: 0 0 350px;
+    max-width: 350px;
     background: #ffffff;
     color: #2d4369;
+    @include media(md) {
+      margin: 0 auto;
+    }
     &:nth-child(2) {
       position: relative;
       bottom: 50px;
+      @include media(md) {
+        position: static;
+      }
     }
   }
   &-txtbox {
     &._01 {
-      padding: 23px 47px 28px 48px;
+      padding: 23px 47px 36px 48px;
     }
     &._02 {
-      padding: 22px 47px 29px 48px;
+      padding: 22px 47px 37px 48px;
     }
     &._03 {
-      padding: 30px 47px 46px 48px;
+      padding: 30px 47px 53px 48px;
     }
   }
   &-tit {
     font-size: 2.4rem;
-    line-height: 1.45833333333;
+    line-height: 1.3;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
   }
   &-txt {
     line-height: 1.7;

@@ -32,18 +32,18 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 0 16px 0 11.6px;
+    padding: 0 16px 4px 11.6px;
 
     h3 {
       font-size: 2rem;
       color: $sub-orange;
       text-align: right;
-      margin-bottom: 74px;
+      margin-bottom: 70px;
     }
     p {
       font-size: 2rem;
       line-height: 1.8;
-      color: #172b3f;
+      color: hsl(210, 47%, 17%);
     }
   }
 
@@ -113,7 +113,7 @@
       background-color: $sub-orange;
       display: block;
       border-radius: 1px;
-      margin: 9.5px auto 0;
+      margin: 9px auto 0;
     }
 
     &._01 {
@@ -132,6 +132,7 @@
       margin-bottom: 26.5px;
     }
     &._06 {
+      margin-left: -20px;
       margin-bottom: 39.5px;
     }
   }
