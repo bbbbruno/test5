@@ -6,6 +6,9 @@
     font-family: $font-heading;
     line-height: 1.105263157894737;
     @include media(md) {
+      font-size: 5rem;
+    }
+    @include media(sm) {
       font-size: 4rem;
       line-height: 1.125;
       margin-bottom: 6px;
@@ -14,6 +17,9 @@
   h3 {
     font-size: 3.2rem;
     @include media(md) {
+      font-size: 2rem;
+    }
+    @include media(sm) {
       font-size: 1.4rem;
     }
     &::after {

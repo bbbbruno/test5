@@ -3,6 +3,8 @@
  * -------------------------------- */
 .about {
   position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
 
   &-heading {
     text-align: right;
@@ -15,6 +17,10 @@
       position: absolute;
       top: -131px;
       right: 0;
+      @include media(lg) {
+        top: -121px;
+        font-size: 3rem;
+      }
       @include media(md) {
         font-size: 1.8rem;
         padding: 8px 68px 9px;
@@ -28,8 +34,12 @@
         max-width: 640px;
         padding: 14px 66px 14px 94px;
         top: -20px;
+        @include media(lg) {
+          top: -30px;
+        }
         @include media(md) {
           display: block;
+          margin-left: auto;
           padding: 9px 52px 8px;
           position: static;
           margin-top: 10.8px;
@@ -42,9 +52,13 @@
     padding-left: 61.5px;
     display: flex;
     margin-bottom: 90px;
+    @include media(lg) {
+      padding-left: 0;
+      padding-right: 61.5px;
+    }
     @include media(md) {
       display: block;
-      padding-left: 0;
+      padding-right: 0;
       margin-bottom: 43.38px;
     }
   }
@@ -72,9 +86,14 @@
     font-weight: normal;
     line-height: 1.1;
     font-family: $font-heading;
+    @include media(lg) {
+      font-size: 6rem;
+    }
     @include media(md) {
-      font-size: 4rem;
       line-height: 1.125;
+    }
+    @include media(sm) {
+      font-size: 4rem;
     }
   }
   &-topsubtit {
@@ -82,11 +101,18 @@
     font-size: 2.4rem;
     margin-left: 14.5px;
     letter-spacing: 0.09em;
+    @include media(lg) {
+      font-size: 1.8rem;
+      margin-left: 10px;
+    }
     @include media(md) {
-      font-size: 1.1rem;
+      font-size: 1.4rem;
       line-height: 1;
       margin-left: 2.5px;
       letter-spacing: 0.26em;
+    }
+    @include media(sm) {
+      font-size: 1.1rem;
     }
 
     span {
@@ -106,6 +132,9 @@
       font-size: 3.2rem;
       position: relative;
       @include media(md) {
+        font-size: 2.2rem;
+      }
+      @include media(sm) {
         font-size: 1.8rem;
       }
       &:not(:last-child) {
@@ -160,13 +189,22 @@
         flex-direction: row-reverse;
       }
     }
+    @include media(lg) {
+      padding: 0 30px 20px !important;
+    }
+    @include media(md) {
+      padding: 0 !important;
+    }
   }
 
   &-txtbox {
     max-width: 347px;
     @include media(md) {
-      padding: 0 35px 8px !important;
+      padding: 0 80px 8px !important;
       max-width: 100%;
+    }
+    @include media(sm) {
+      padding: 0 35px 8px !important;
     }
 
     &._01 {
@@ -191,17 +229,26 @@
 
     &._01 {
       margin-bottom: 112px;
+      @include media(lg) {
+        margin-bottom: 50px;
+      }
     }
     &._02 {
       text-align: right;
       padding-left: 10px;
       margin-bottom: 85px;
+      @include media(lg) {
+        margin-bottom: 25px;
+      }
       @include media(md) {
         padding-left: 0;
       }
     }
     &._03 {
       margin-bottom: 112px;
+      @include media(lg) {
+        margin-bottom: 50px;
+      }
     }
   }
   &-txt {

@@ -4,7 +4,8 @@
 .read {
   text-align: right;
   position: relative;
-  margin-bottom: 65px;
+  margin: 0 auto 65px;
+  max-width: 1280px;
   @include media(md) {
     margin-bottom: 87px;
   }
@@ -17,6 +18,9 @@
     max-width: 758px;
     position: relative;
     top: -25px;
+    @include media(lg) {
+      padding-bottom: 19.53125vw;
+    }
     @include media(md) {
       top: 0;
       padding: 51px 34px 112px;
@@ -54,12 +58,17 @@
 
   &-img {
     position: absolute;
-    top: 228px;
-    left: 131px;
-    @include media(md) {
-      max-width: 71.5625vw;
-      top: auto;
+    bottom: -33px;
+    left: 10.234375vw;
+    max-width: 35.703125vw;
+    @include media(xl) {
       left: 0;
+    }
+    @include media(lg) {
+      bottom: -20px;
+    }
+    @include media(md) {
+      max-width: 229px;
       bottom: -77px;
     }
   }

@@ -58,6 +58,9 @@
         margin-bottom: 60px;
       }
       @include media(md) {
+        margin: 0 100px 50px;
+      }
+      @include media(sm) {
         margin: 0;
       }
     }

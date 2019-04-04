@@ -15,8 +15,11 @@
     background: linear-gradient($start 0%, $almoststart 5.42%, $middle 49.78%, $end 100%);
   }
   @include media(md) {
-    font-size: 1.1rem;
+    font-size: 2rem;
     padding: 12px 24px 11px 24px;
     letter-spacing: 0.1em;
+  }
+  @include media(sm) {
+    font-size: 1.1rem;
   }
 }

@@ -10,6 +10,9 @@
   &-heading {
     @include heading();
     margin-bottom: 168.5px;
+    @include media(lg) {
+      margin-bottom: 100px;
+    }
     @include media(md) {
       margin-bottom: 79px;
     }
@@ -21,6 +24,14 @@
       justify-content: space-between;
       flex-wrap: wrap;
       padding: 0 16.5px;
+      align-items: flex-start;
+    }
+    @include media(xl) {
+      justify-content: center !important;
+    }
+    @include media(lg) {
+      justify-content: space-around !important;
+      padding: 0 !important;
     }
   }
   &-item {
@@ -39,14 +50,32 @@
     max-width: 350px;
     background: #ffffff;
     color: #2d4369;
+    @include media(xl) {
+      margin: 0 25px;
+    }
+    @include media(lg) {
+      margin: 0;
+    }
     @include media(md) {
       margin: 0 auto;
+    }
+    &:not(:last-child) {
+      @include media(md) {
+        margin-bottom: 30px;
+      }
+      @include media(sm) {
+        margin-bottom: 0;
+      }
     }
     &:nth-child(2) {
       position: relative;
       bottom: 50px;
-      @include media(md) {
+      @include media(xl) {
         position: static;
+        margin-bottom: 50px;
+      }
+      @include media(lg) {
+        margin-bottom: 35px;
       }
     }
   }

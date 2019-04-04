@@ -18,7 +18,13 @@
     font-size: 12rem;
     line-height: 1.3;
     text-shadow: 0 2px 4px rgba(14, 39, 58, 0.3);
+    @include media(lg) {
+      margin-bottom: 30px;
+    }
     @include media(md) {
+      font-size: 7rem;
+    }
+    @include media(sm) {
       font-size: 5rem;
       line-height: 1;
       margin-bottom: 17px;
@@ -30,11 +36,16 @@
     line-height: 1;
     margin-bottom: 117px;
     margin-top: -10px;
+    @include media(lg) {
+      margin-top: 0;
+    }
     @include media(md) {
-      font-size: 1.8rem;
+      font-size: 2.5rem;
       line-height: 1.5;
       margin-bottom: 50px;
-      margin-top: 0;
+    }
+    @include media(sm) {
+      font-size: 1.8rem;
     }
   }
   &-btn {
@@ -43,30 +54,10 @@
     margin-bottom: 132px;
     position: relative;
     z-index: 200;
-    @include media(md) {
+    @include media(sm) {
       margin-bottom: 162px;
     }
   }
-
-  /* &-top {
-    width: 100%;
-    position: relative;
-
-    &::before {
-      content: '';
-      display: block;
-      padding-top: 62.8125%;
-    }
-  }
-  &-topimg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../img/top.jpg') no-repeat center center;
-    background-size: cover; 
-  } */
 
   &-wrapper {
     position: absolute;
@@ -89,6 +80,9 @@
   max-width: 1217px;
   margin: 0 auto 190px;
   padding: 20px 35px 0 10px;
+  @include media(lg) {
+    padding: 20px 10px 0;
+  }
   @include media(md) {
     padding: 12px 9px 0 14px;
     margin-bottom: 113px;
@@ -101,7 +95,13 @@
 
     img {
       width: 143px;
+      @include media(lg) {
+        width: 120px;
+      }
       @include media(md) {
+        width: 100px;
+      }
+      @include media(sm) {
         width: 71px;
       }
     }
@@ -111,35 +111,45 @@
     @include media(md) {
       display: block;
       color: $main;
-      font-size: 1.1rem;
+      font-size: 1.4rem;
       line-height: 1.090909090909091;
       font-family: $font-heading;
       font-weight: bold;
-      padding: 7.5px 0;
+      padding: 10.5px 0;
       letter-spacing: 0.32em;
       position: relative;
       &::before {
         content: '';
         display: inline-block;
-        width: 40px;
+        width: 50px;
         height: 2px;
         background-color: $main;
         position: absolute;
         top: -1px;
         left: 25%;
         transform: translateX(-25%);
+        @include media(sm) {
+          width: 40px;
+        }
       }
       &::after {
         content: '';
         display: inline-block;
-        width: 40px;
+        width: 50px;
         height: 2px;
         background-color: $main;
         position: absolute;
         bottom: -1px;
         left: 25%;
         transform: translateX(-25%);
+        @include media(sm) {
+          width: 40px;
+        }
       }
+    }
+    @include media(sm) {
+      padding: 7.5px 0;
+      font-size: 1.1rem;
     }
   }
 
@@ -191,6 +201,9 @@
   }
   &-link {
     margin-right: 37px;
+    @include media(lg) {
+      margin-right: 15px;
+    }
     @include media(md) {
       margin-right: 0;
       &:not(:last-child) {
@@ -204,6 +217,9 @@
       font-family: $font-heading;
       color: $main;
       font-weight: bold;
+      @include media(lg) {
+        font-size: 2rem;
+      }
       @include media(md) {
         color: #ffffff;
         line-height: 1.08333333333;
@@ -218,6 +234,10 @@
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     border-radius: 180px;
     display: inline-block;
+    @include media(lg) {
+      font-size: 1.4rem;
+      padding: 10px 20px;
+    }
     @include media(md) {
       font-size: 1.1rem;
       line-height: 1.54545455;
