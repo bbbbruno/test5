@@ -8,7 +8,10 @@
   padding: 10px;
   color: #ffffff;
   position: relative;
+  width: 100vw;
+  height: 100vh;
   @include media(md) {
+    height: auto;
     background-position: left -63px top;
   }
 
@@ -192,7 +195,7 @@
     }
   }
   &-links {
-    margin-bottom: 44px;
+    margin-bottom: 40px;
     @media screen and (min-width: 768px) {
       display: flex;
       align-items: center;
@@ -223,6 +226,7 @@
       @include media(md) {
         color: #ffffff;
         line-height: 1.08333333333;
+        font-size: 2.4rem;
       }
     }
   }
@@ -241,9 +245,10 @@
     @include media(md) {
       font-size: 1.1rem;
       line-height: 1.54545455;
-      padding: 12px 30px 11px 30px;
+      padding: 12px 28px 11px 28px;
       max-width: 150px;
       margin: 0 auto;
+      letter-spacing: 0.2em;
     }
 
     &:hover {
