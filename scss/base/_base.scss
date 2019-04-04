@@ -13,9 +13,6 @@ body {
   @include media(sm) {
     width: 100%;
   }
-  @include media(xs) {
-    width: 100%;
-  }
 
   color: $main;
   font-family: 'メイリオ', Meiryo,sans-serif;;
@@ -25,42 +22,6 @@ body {
   font-size: 1.6rem;
   @include media(md) {
     font-size: 1.4rem;
-  }
-}
-
-// keyframes
-@keyframes menuIn {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-@keyframes appealInMd {
-  from {
-    transform: translateY(63px);
-  }
-  to {
-    transform: translateY(0px);
-  }
-}
-@keyframes fadeInUpArrowMd {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 50px, 0) rotate(90deg);
-    transform: translate3d(0, 50px, 0) rotate(90deg);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0) rotate(90deg);
-    transform: translate3d(0, 0, 0) rotate(90deg);
-  }
-}
-.fadeInUpArrowMd {
-  @include media(md) {
-    animation-name: fadeInUpArrowMd;
   }
 }
 
