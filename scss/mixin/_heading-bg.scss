@@ -1,4 +1,4 @@
-@mixin heading-bg($size-bg, $size) {
+@mixin heading-bg($size-bg, $size, $size-bg-sp, $size-sp) {
   text-align: center;
   position: relative;
 
@@ -7,6 +7,10 @@
     font-size: $size-bg;
     line-height: 1.105;
     color: rgba(233, 207, 78, 0.5);
+    @include media(md) {
+      font-size: $size-bg-sp;
+      line-height: 1.1375;
+    }
   }
   h3 {
     font-size: $size;
@@ -14,5 +18,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @include media(md) {
+      font-size: $size-sp;
+    }
   }
 }

@@ -5,17 +5,27 @@
     font-size: 7.6rem;
     font-family: $font-heading;
     line-height: 1.105263157894737;
+    @include media(md) {
+      font-size: 4rem;
+      line-height: 1.125;
+      margin-bottom: 6px;
+    }
   }
   h3 {
     font-size: 3.2rem;
+    @include media(md) {
+      font-size: 1.4rem;
+    }
     &::after {
       content: '';
       width: 80px;
       height: 3px;
       display: block;
       background-color: $sub-yellow;
-      margin: 0 auto;
-      margin-top: 29px;
+      margin: 29px auto 0;
+      @include media(md) {
+        margin-top: 6px;
+      }
     }
   }
 }

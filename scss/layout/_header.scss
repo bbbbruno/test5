@@ -43,6 +43,9 @@
     margin-bottom: 132px;
     position: relative;
     z-index: 200;
+    @include media(md) {
+      margin-bottom: 162px;
+    }
   }
 
   /* &-top {

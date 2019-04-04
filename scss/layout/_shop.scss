@@ -7,10 +7,17 @@
   background: $main;
   color: #ffffff;
   text-align: center;
+  @include media(md) {
+    margin-top: 80.5px;
+    padding-top: 45px;
+  }
 
   &-heading {
-    @include heading-bg(20rem, 4rem);
+    @include heading-bg(20rem, 4rem, 8rem, 1.6rem);
     margin-bottom: 109px;
+    @include media(md) {
+      margin-bottom: 48px;
+    }
 
     h2 {
       font-weight: normal;
@@ -30,6 +37,11 @@
     @media screen and (min-width: 768px) {
       flex: 0 0 50%;
     }
+    @include media(md) {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
 
     @for $var from 1 through 2 {
       &:nth-child(#{$var}) &-wrapper {
@@ -38,6 +50,9 @@
           content: '';
           display: block;
           padding-top: 60.625%;
+          @include media(md) {
+            padding-top: 62.5%;
+          }
         }
 
         &-inner {
@@ -48,6 +63,9 @@
           bottom: 0;
           background: url('../img/shop#{$var}.jpg');
           background-size: cover;
+          @include media(md) {
+            background: url('../img/shop#{$var}-sp.jpg');
+          }
         }
       }
     }
@@ -65,6 +83,9 @@
   &-txtbox {
     position: relative;
     padding: 52px 0 51px;
+    @include media(md) {
+      padding: 27px 0 26px;
+    }
 
     &._aoyama {
       background: $sub-orange;
@@ -81,10 +102,19 @@
     top: -51px;
     left: 50%;
     transform: translateX(-50%);
+    @include media(md) {
+      font-size: 5rem;
+      line-height: 1.12;
+      top: -43px;
+    }
   }
   &-txt {
     font-size: 4rem;
     letter-spacing: 0.36em;
     margin-left: 15px;
+    @include media(md) {
+      font-size: 1.8rem;
+      margin-left: 7px;
+    }
   }
 }

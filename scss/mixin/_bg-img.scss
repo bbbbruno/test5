@@ -2,10 +2,17 @@ $urls: (
   about1: "../img/about1.jpg",
   about2: "../img/about2.jpg",
   about3: "../img/about3.jpg",
+  release1: "../img/release1.jpg",
+  release1-sp: "../img/release1-sp.jpg",
+  release2: "../img/release2.jpg",
+  release2-sp: "../img/release2-sp.jpg",
+  release3: "../img/release3.jpg",
+  release3-sp: "../img/release3-sp.jpg",
 );
 
-@mixin bg-img($url, $width, $percent, $percent-sp) {
+@mixin bg-img($url, $width, $percent, $percent-sp, $changeurl: null) {
   width: $width;
+  position: relative;
   @include media(md) {
     width: 100%;
   }
@@ -27,5 +34,8 @@ $urls: (
     height: 100%;
     background: url('#{map-get($urls, $url)}') no-repeat center center;
     background-size: cover;
+    @if $changeurl != null {
+      background: url('#{map-get($urls, $changeurl)}') no-repeat center center;
+    }
   }
 }

@@ -86,6 +86,7 @@
       font-size: 1.1rem;
       line-height: 1;
       margin-left: 2.5px;
+      letter-spacing: 0.26em;
     }
 
     span {
@@ -211,7 +212,6 @@
   }
 
   &-imgbox {
-    position: relative;
 
     &._01 {
       @include bg-img(about1, 54.14063vw, 49.4949494949495%, 39.6875%);

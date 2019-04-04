@@ -4,10 +4,16 @@
 .review {
   padding-top: 60px;
   text-align: center;
+  @include media(md) {
+    padding-top: 81px;
+  }
 
   &-heading {
     @include heading();
     margin-bottom: 108.5px;
+    @include media(md) {
+      margin-bottom: 79px;
+    }
   }
 
   &-list {
@@ -20,7 +26,9 @@
     margin-bottom: 60px;
     @include media(md) {
       grid-template-columns: minmax(320px, 494px);
+      grid-gap: 0;
       padding: 0;
+      margin-bottom: 33px;
     }
   }
   &-item {
@@ -56,6 +64,12 @@
   }
   &-tit {
     font-size: 3.2rem;
+    @include media(md) {
+      font-size: 1.8rem;
+      padding-bottom: 94px !important;
+      padding-left: 0 !important;
+      text-align: center;
+    }
 
     &._01 {
       padding-left: 36px;
@@ -77,6 +91,11 @@
   &-txt {
     font-size: 2rem;
     background: $sub-yellow;
+    @include media(md) {
+      font-size: 1.4rem;
+      padding: 9px 0 10px !important;
+      text-align: center;
+    }
 
     &._01 {
       padding: 46px 0 40px 36px;
@@ -97,5 +116,10 @@
     padding: 23px 43px 22px;
     letter-spacing: 0.002em;
     color: #ffffff !important;
+    @include media(md) {
+      font-size: 1.1rem;
+      letter-spacing: 0.12em;
+      padding: 12px 16px 11px;
+    }
   }
 }

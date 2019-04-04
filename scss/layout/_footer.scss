@@ -5,10 +5,16 @@
   background: $main;
   color: #ffffff;
   padding: 20px 0 12px;
+  @include media(md) {
+    padding: 0;
+  }
 
   > .container {
     display: flex;
     justify-content: space-between;
+    @include media(md) {
+      padding: 0 17px;
+    }
   }
 
   p {
@@ -20,11 +26,20 @@
     text-align: center;
     padding: 29px 0 30px;
     margin-left: 37px;
+    @include media(md) {
+      font-size: 1.1rem;
+      padding: 34px 0 35px;
+      margin-left: 19px;
+    }
   }
 
   img {
     display: block;
     height: 74px;
+    @include media(md) {
+      height: 40px;
+      align-self: flex-end;
+    }
 
     &:hover {
       cursor: pointer;

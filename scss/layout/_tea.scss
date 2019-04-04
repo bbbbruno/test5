@@ -1,5 +1,8 @@
 .tea {
   padding-top: 139px;
+  @include media(md) {
+    padding-top: 45.6px;
+  }
 
   &-topwrapper {
     position: relative;
@@ -7,6 +10,9 @@
     @media screen and (min-width: 768px) {
       display: flex;
       justify-content: space-between;
+    }
+    @include media(md) {
+      margin-bottom: 14px;
     }
   }
   &-topimgbox {
@@ -21,8 +27,18 @@
       position: absolute;
       top: -55.5px;
       right: 16px;
+      @include media(md) {
+        font-size: 5rem;
+        top: 158.5px;
+        right: 50%;
+        transform: translateX(50%);
+      }
       &:nth-child(2) {
         top: 41.5px;
+        @include media(md) {
+          top: 210.5px;
+          white-space: nowrap;
+        }
       }
     }
   }
@@ -33,17 +49,36 @@
     flex-direction: column;
     justify-content: flex-end;
     padding: 0 16px 4px 11.6px;
-
+    @include media(md) {
+      padding: 61px 35px 0;
+      letter-spacing: 0.15em;
+    }
     h3 {
       font-size: 2rem;
       color: $sub-orange;
       text-align: right;
       margin-bottom: 70px;
+      @include media(md) {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: 24px;
+      }
     }
     p {
       font-size: 2rem;
       line-height: 1.8;
       color: hsl(210, 47%, 17%);
+      @include media(md) {
+        font-size: 1.4rem;
+        line-height: 1.714285714285714;
+        letter-spacing: -0.001em;
+      }
+      &._md {
+        display: none;
+        @include media(md) {
+          display: block;
+        }
+      }
     }
   }
 
@@ -51,6 +86,9 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 99px;
+    @include media(md) {
+      margin-bottom: 67px;
+    }
   }
   &-topimg {
 
@@ -71,21 +109,39 @@
     position: relative;
     &:nth-child(1) {
       padding: 43px 45px 25px;
+      @include media(md) {
+        padding: 49px 30px 25px;
+      }
     }
     &:nth-child(2) {
       padding: 43px 42px 24px 48px;
+      @include media(md) {
+        padding: 49px 30px 24px;
+      }
     }
     &:nth-child(3) {
       padding: 43px 45px 22px;
+      @include media(md) {
+        padding: 49px 30px 22px;
+      }
     }
     &:nth-child(4) {
       padding: 38px 45px 29px;
+      @include media(md) {
+        padding: 44px 30px 29px;
+      }
     }
     &:nth-child(5) {
       padding: 38px 45px 34px;
+      @include media(md) {
+        padding: 44px 30px 34px;
+      }
     }
     &:nth-child(6) {
       padding: 38px 35px 40px 55px;
+      @include media(md) {
+        padding: 44px 30px 40px;
+      }
     }
   }
   &-num {
@@ -106,6 +162,9 @@
   &-tit {
     font-size: 2.4rem;
     text-align: center;
+    @include media(md) {
+      font-size: 1.8rem;
+    }
     &::after {
       content: '';
       width: 150px;
@@ -118,22 +177,64 @@
 
     &._01 {
       margin-bottom: 20.5px;
+      @include media(md) {
+        &::after {
+          margin-top: 10.5px;
+        }
+      }
     }
     &._02 {
-      margin-bottom: 19.5px;
+      margin-bottom: 17.5px;
+      @include media(md) {
+        &::after {
+          margin-top: 12.5px;
+        }
+      }
     }
     &._03 {
       margin-bottom: 21.5px;
+      @include media(md) {
+        &::after {
+          margin-top: 12.5px;
+        }
+      }
     }
     &._04 {
       margin-bottom: 27.5px;
+      @include media(md) {
+        &::after {
+          margin-top: 10.5px;
+        }
+      }
     }
     &._05 {
       margin-bottom: 26.5px;
+      @include media(md) {
+        &::after {
+          margin-top: 10.5px;
+        }
+      }
     }
     &._06 {
       margin-left: -20px;
       margin-bottom: 39.5px;
+      @include media(md) {
+        margin-left: 0;
+        &::after {
+          margin-top: 10.5px;
+        }
+      }
+    }
+  }
+  &-txt {
+    @include media(md) {
+      font-size: 1.4rem;
+    }
+    &._01, &._02 {
+      line-height: 1.625;
+      @include media(md) {
+        line-height: 1.857142857142857;
+      }
     }
   }
 }
