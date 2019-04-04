@@ -46,6 +46,9 @@
     @include media(sm) {
       padding: 4px 0 3.5px 84px;
     }
+    &:hover {
+      cursor: pointer;
+    }
     &::before {
       content: 'Q';
       display: block;
@@ -87,9 +90,6 @@
         width: 11px;
         height: 11px;
         right: 22.5px;
-      }
-      &:hover {
-        cursor: pointer;
       }
     }
   }

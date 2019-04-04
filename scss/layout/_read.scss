@@ -8,6 +8,7 @@
   max-width: 1280px;
   padding-top: 4px;
   @include media(md) {
+    padding-top: 0;
     margin-bottom: 87px;
   }
 

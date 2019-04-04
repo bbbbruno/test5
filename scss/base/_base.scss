@@ -29,12 +29,12 @@ body {
 }
 
 // keyframes
-@keyframes appealIn {
+@keyframes menuIn {
   from {
-    transform: translateX(11.48648648648649vw);
+    transform: translateY(-100%);
   }
   to {
-    transform: translateX(0px);
+    transform: translateY(0);
   }
 }
 @keyframes appealInMd {
