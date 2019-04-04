@@ -122,7 +122,6 @@
       display: block;
       color: $main;
       font-size: 1.4rem;
-      line-height: 1.090909090909091;
       font-family: $font-heading;
       font-weight: bold;
       padding: 10.5px 0;
@@ -141,6 +140,7 @@
         transform: translateX(-25%);
         @include media(sm) {
           width: 40px;
+          line-height: 1.090909090909091;
         }
       }
       &::after {
@@ -165,18 +165,17 @@
   }
 
   &-list {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: $main;
-    z-index: 10000;
-    display: none;
-    @media screen and (min-width: 768px) {
-      display: flex;
-      position: static;
-      background: transparent;
+    display: flex;
+    background: transparent;
+    @include media(md) {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $main;
+      z-index: 10000;
     }
   }
   &-item {
