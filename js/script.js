@@ -1,3 +1,12 @@
+// ロード
+$(window).on('load', function() {
+
+  $('.loader-inner').fadeOut(500, function() {
+    $('.loader').fadeOut(750);
+  });
+
+});
+
 $(function() {
   // ハンバーガーメニュー
   $('.gnav-toggler').click(function() {
@@ -18,9 +27,37 @@ $(function() {
 });
 
 $(function() {
+  // ナビバーがトップから離れると切り替わる
+  $(window).scroll(function() {
+    let scroll = $(this).scrollTop();
+    if ( scroll > 0 ) {
+      if (window.matchMedia( '(min-width: 768px)' ).matches) {
+        $('.gnav-wrapper').css('background-color', '#194769');
+      } else {
+        $('.gnav').css('background-color', '#194769');
+      }
+      $('.gnav-logo._origin').hide();
+      $('.gnav-logo._white').fadeIn(300);
+      $('.gnav-link a').addClass('_active');
+      $('.gnav-toggler._origin').addClass('_active');
+    } else {
+      if (window.matchMedia( '(min-width: 768px)' ).matches) {
+        $('.gnav-wrapper').css('background-color', 'transparent');
+      } else {
+        $('.gnav').css('background-color', 'transparent');
+      }
+      $('.gnav-logo._white').hide();
+      $('.gnav-logo._origin').fadeIn(300);
+      $('.gnav-link a').removeClass('_active');
+      $('.gnav-toggler._origin').removeClass('_active');
+    }
+  });
+});
+
+$(function() {
   // スムーススクロール
   if (window.matchMedia( '(min-width: 768px)' ).matches) {
-    let headerHight = 115;
+    let headerHight = 150;
     $('a').click(function() {;
       if(this.hash !== '') {
         var hash = this.hash;
@@ -30,7 +67,7 @@ $(function() {
       }
     });
   } else {
-    let headerHight = 71;
+    let headerHight = 68;
     $('a').click(function() {;
       if(this.hash !== '') {
         var hash = this.hash;
