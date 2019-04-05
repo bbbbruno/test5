@@ -34,6 +34,14 @@
     }
   }
   &-item {
+    background: #ffffff;
+
+    a {
+      display: block;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
     @media screen and (min-width: 768px) {
       flex: 0 0 50%;
     }

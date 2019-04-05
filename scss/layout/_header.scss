@@ -64,14 +64,38 @@
     }
   }
 
-  &-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 10px solid $main;
-    z-index: 100;
+  &-wrapper-line {
+    position: fixed;
+    z-index: 500;
+
+    &._t {
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 10px;
+      background-color: $main;
+    }
+    &._l {
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 100vh;
+      background-color: $main;
+    }
+    &._r {
+      top: 0;
+      right: 0;
+      width: 10px;
+      height: 100vh;
+      background-color: $main;
+    }
+    &._b {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 10px;
+      background-color: $main;
+    }
     @include media(md) {
       background: rgba(255, 255, 255, 0.2);
     }

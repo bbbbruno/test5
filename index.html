@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>test5</title>
   <meta name="description" content="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -56,7 +57,12 @@
       <div class="header-topimg"></div>
     </div>
 
-    <div class="header-wrapper"></div>
+    <div class="header-wrapper">
+      <div class="header-wrapper-line _t"></div>
+      <div class="header-wrapper-line _l"></div>
+      <div class="header-wrapper-line _r"></div>
+      <div class="header-wrapper-line _b"></div>
+    </div>
 
   </header><!-- /.header -->
 
@@ -468,24 +474,28 @@
 
     <ul class="shop-list">
       <li class="shop-item">
-        <div class="shop-item-wrapper">
-          <div class="shop-overlay"></div>
-          <div class="shop-item-wrapper-inner"></div>
-        </div>
-        <div class="shop-txtbox _aoyama">
-          <h4 class="shop-tit">AOYAMA</h4>
-          <p class="shop-txt">青山</p>
-        </div>
+        <a href="#">
+          <div class="shop-item-wrapper">
+            <div class="shop-overlay"></div>
+            <div class="shop-item-wrapper-inner"></div>
+          </div>
+          <div class="shop-txtbox _aoyama">
+            <h4 class="shop-tit">AOYAMA</h4>
+            <p class="shop-txt">青山</p>
+          </div>
+        </a>
       </li>
       <li class="shop-item">
-        <div class="shop-item-wrapper">
-          <div class="shop-overlay"></div>
-          <div class="shop-item-wrapper-inner"></div>
-        </div>
-        <div class="shop-txtbox _sinjuku">
-          <h4 class="shop-tit">SHINJUKU</h4>
-          <p class="shop-txt">新宿</p>
-        </div>
+        <a href="#">
+          <div class="shop-item-wrapper">
+            <div class="shop-overlay"></div>
+            <div class="shop-item-wrapper-inner"></div>
+          </div>
+          <div class="shop-txtbox _sinjuku">
+            <h4 class="shop-tit">SHINJUKU</h4>
+            <p class="shop-txt">新宿</p>
+          </div>
+        </a>
       </li>
     </ul>
 
@@ -497,7 +507,7 @@
     <div class="container">
       <div></div>
       <p class="footer-copyright">© bollm tea</p>
-      <img id="scroll" src="img/totop.png" alt="上矢印">
+      <img class="animated infinite bounce delay-2s slow" id="scroll" src="img/totop.png" alt="上矢印">
     </div>
   </footer>
 

@@ -157,6 +157,7 @@
     font-family: $font-heading;
     line-height: 1.105263157894737;
     margin: 30px 0 28px;
+    font-weight: bold;
     @include media(sm) {
       font-size: 6rem;
       margin: 31px 0;
