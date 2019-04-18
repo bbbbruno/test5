@@ -13,7 +13,7 @@ $(function() {
     $('.gnav-list').slideToggle();
     $('.gnav-list').toggleClass('_open');
   });
-});
+});vvvvvvvvvvvvvvvvv
 
 $(function() {
   // 画面のどこかをクリックするとハンバーガーメニューが閉じる
@@ -53,6 +53,8 @@ $(function() {
     }
   });
 });
+
+// 変更したよ
 
 $(function() {
   // スムーススクロール
