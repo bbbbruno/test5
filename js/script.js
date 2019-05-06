@@ -1,37 +1,37 @@
 // ロード
-$(window).on('load', function() {
+$(window).on('load', function () {
 
-  $('.loader-inner').fadeOut(500, function() {
+  $('.loader-inner').fadeOut(500, function () {
     $('.loader').fadeOut(750);
   });
 
 });
 
-$(function() {
+$(function () {
   // ハンバーガーメニュー
-  $('.gnav-toggler').click(function() {
+  $('.gnav-toggler').click(function () {
     $('.gnav-list').slideToggle();
     $('.gnav-list').toggleClass('_open');
   });
-});vvvvvvvvvvvvvvvvv
+});
 
-$(function() {
+$(function () {
   // 画面のどこかをクリックするとハンバーガーメニューが閉じる
-  $(document).click(function(event) {
+  $(document).click(function (event) {
     let clickover = $(event.target);
     let _opened = $('.gnav-list._open').hasClass('_open');
-    if ( _opened && !clickover.hasClass('gnav-toggler') ) {
+    if (_opened && !clickover.hasClass('gnav-toggler')) {
       $('.gnav-toggler:not(._menu)').trigger('click');
     }
   });
 });
 
-$(function() {
+$(function () {
   // ナビバーがトップから離れると切り替わる
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     let scroll = $(this).scrollTop();
-    if ( scroll > 0 ) {
-      if (window.matchMedia( '(min-width: 768px)' ).matches) {
+    if (scroll > 0) {
+      if (window.matchMedia('(min-width: 768px)').matches) {
         $('.gnav-wrapper').css('background-color', '#194769');
       } else {
         $('.gnav').css('background-color', '#194769');
@@ -41,7 +41,7 @@ $(function() {
       $('.gnav-link a').addClass('_active');
       $('.gnav-toggler._origin').addClass('_active');
     } else {
-      if (window.matchMedia( '(min-width: 768px)' ).matches) {
+      if (window.matchMedia('(min-width: 768px)').matches) {
         $('.gnav-wrapper').css('background-color', 'transparent');
       } else {
         $('.gnav').css('background-color', 'transparent');
@@ -56,24 +56,26 @@ $(function() {
 
 // 変更したよ
 
-$(function() {
+$(function () {
   // スムーススクロール
-  if (window.matchMedia( '(min-width: 768px)' ).matches) {
+  if (window.matchMedia('(min-width: 768px)').matches) {
     let headerHight = 150;
-    $('a').click(function() {;
-      if(this.hash !== '') {
+    $('a').click(function () {
+      ;
+      if (this.hash !== '') {
         var hash = this.hash;
-        $('html, body').animate( {
+        $('html, body').animate({
           scrollTop: $(hash).offset().top - headerHight
         }, 800, 'swing')
       }
     });
   } else {
     let headerHight = 68;
-    $('a').click(function() {;
-      if(this.hash !== '') {
+    $('a').click(function () {
+      ;
+      if (this.hash !== '') {
         var hash = this.hash;
-        $('html, body').animate( {
+        $('html, body').animate({
           scrollTop: $(hash).offset().top - headerHight
         }, 800, 'swing')
       }
@@ -81,11 +83,11 @@ $(function() {
   }
 });
 
-$(function() {
+$(function () {
   // アコーディオンメニュー
-  $('.qa-tit').click(function(e) {
+  $('.qa-tit').click(function (e) {
     $(this).next().slideToggle();
-    if ( $(this).hasClass('_open') ) {
+    if ($(this).hasClass('_open')) {
       $(this).removeClass('_open');
       $(this).addClass('_close');
     } else {
@@ -95,9 +97,11 @@ $(function() {
   });
 });
 
-$(function() {
+$(function () {
   // トップへスクロール
-  $('#scroll').click(function() {
-    $('html, body').animate({scrollTop: 0}, 500)
+  $('#scroll').click(function () {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500)
   });
 });
